@@ -1,0 +1,103 @@
+/* --- KEYFRAME ANIMATIONS --- */
+
+/* Fade in up animation for the main cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle floating effect */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Gold border pulse */
+@keyframes goldGlow {
+  0% { border-color: #d4af37; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+  50% { border-color: #f7e08a; box-shadow: 0 15px 45px rgba(212, 175, 55, 0.3); }
+  100% { border-color: #d4af37; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+}
+
+/* --- HOVERS & TRANSITIONS --- */
+
+img {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+header {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+nav ul li a {
+  transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.about-card {
+  animation: fadeInUp 1s ease-out, goldGlow 4s infinite ease-in-out;
+}
+
+.contact-card {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Hovering the cards makes them "lift" */
+.about-card:hover, .contact-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.input-group input, 
+.input-group textarea {
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  transform: translateX(5px);
+}
+
+.submit-btn {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.submit-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Footer Section */
+.footer-section {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Text Case Transitions */
+.text-case {
+  transition: all 0.3s ease;
+}
+
+.text-case:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 14px 28px rgba(0, 0, 0, 0.4), 
+    0 10px 10px rgba(0, 0, 0, 0.4);
+}

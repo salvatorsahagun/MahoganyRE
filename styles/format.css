@@ -1,0 +1,89 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #FBF1F2; /* Pearl Pink Backdrop */
+  color: #2d3e2d;
+}
+
+img {
+  border: 5px solid #000000;
+  outline: 3px solid #d4af37;
+  border-radius: 8px;
+}
+
+header {
+  background: linear-gradient(135deg, #046307 0%, #013220 100%);
+  border-bottom: 3px solid #d4af37;
+}
+
+header h1 {
+  color: #d4af37;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+nav ul li a::after {
+  background-color: #d4af37;
+}
+
+.about-card {
+  background: linear-gradient(145deg, #046307 0%, #013220 100%);
+  color: #ffffff;
+  border-radius: 15px;
+  border: 2px solid #d4af37;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 15px;
+  border: 2px solid #000000;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.about-card h1 {
+  color: #d4af37;
+  text-transform: uppercase;
+}
+
+.input-group input, 
+.input-group textarea {
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.input-group input:focus {
+  border-color: #d4af37;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #046307 0%, #013220 100%);
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background: #d4af37;
+  color: #013220;
+  letter-spacing: 1px;
+}
+
+/* The Text Case Wrapper */
+.text-case {
+  background-color: rgba(255, 255, 255, 0.05); /* Slight tint to look like glass/casing */
+  border: 1px solid rgba(212, 175, 55, 0.3);    /* Subtle gold containment line */
+  border-radius: 8px;
+  
+  /* The Shadow: Creates a rich, layered drop shadow effect */
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.3), 
+    0 6px 6px rgba(0, 0, 0, 0.4),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
