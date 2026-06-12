@@ -166,3 +166,32 @@ nav ul li a::after {
     border-radius: 30px; /* Slightly tighter radius for smaller screens */
   }
 }
+
+/* ==========================================================================
+   Case Presentation & Button Theming Additions
+   ========================================================================== */
+
+/* Turns the form container into a distinct, high-end "case" panel */
+.form-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef2f5;
+}
+
+/* Theming defaults for the new corporate Reset action */
+.reset-btn {
+  background-color: #f4f6f8;
+  color: #4a5568;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.reset-btn:hover {
+  background-color: #e2e8f0;
+  color: #1a202c;
+}
