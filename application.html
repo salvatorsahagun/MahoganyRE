@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahogany Capital Advisory</title>
+  <title>Application - Mahogany Capital Advisory</title>
   <link rel="stylesheet" href="styles/format.css">
   <link rel="stylesheet" href="styles/effects.css">
   <link rel="stylesheet" href="styles/layout.css">
@@ -24,110 +24,114 @@
   </nav>
 </header>
 
-<!-- The page-case acts as the presentation container frame -->
-<main class="page-case">
-  <div class="form-container">
-    <h2>Commercial Real Estate Loan Application</h2>
-    <p class="subtitle">Please complete the checklist below to initiate the underwriting process.</p>
-    
-    <form action="#" method="POST" enctype="multipart/form-data">
+<main class="main-container">
+  <!-- Validated White Presentation Cage -->
+  <section class="about-card">
+    <div class="about-content form-container">
+      
+      <h2>Commercial Real Estate Loan Application</h2>
+      <p class="subtitle">Please complete the checklist below to initiate the underwriting process.</p>
         
-        <fieldset>
-            <legend>1. Executive Summary & Loan Request</legend>
+      <form action="#" method="POST" enctype="multipart/form-data">
             
-            <div class="form-group">
-                <label for="borrower-name">Borrower / Entity Name:</label>
-                <input type="text" id="borrower-name" name="borrower_name" placeholder="e.g., ABC Holdings LLC" required>
-            </div>
+        <fieldset>
+          <legend>1. Executive Summary & Loan Request</legend>
+                
+          <div class="form-group">
+            <label for="borrower-name">Borrower / Entity Name:</label>
+            <input type="text" id="borrower-name" name="borrower_name" placeholder="e.g., ABC Holdings LLC" required>
+          </div>
 
-            <div class="form-group">
-                <label for="guarantor-name">Owner / Guarantor Name(s):</label>
-                <input type="text" id="guarantor-name" name="guarantor_name" placeholder="Full legal name(s)" required>
-            </div>
+          <div class="form-group">
+            <label for="guarantor-name">Owner / Guarantor Name(s):</label>
+            <input type="text" id="guarantor-name" name="guarantor_name" placeholder="Full legal name(s)" required>
+          </div>
 
-            <div class="form-row">
-                <div class="form-group col">
-                    <label for="loan-amount">Requested Loan Amount ($):</label>
-                    <input type="number" id="loan-amount" name="loan_amount" min="0" step="any" placeholder="0.00" required>
-                </div>
-                <div class="form-group col">
-                    <label for="loan-term">Loan Term (Months):</label>
-                    <input type="number" id="loan-term" name="loan_term" min="1" placeholder="e.g., 12, 24, 36" required>
-                </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="loan-amount">Requested Loan Amount ($):</label>
+              <input type="number" id="loan-amount" name="loan_amount" min="0" step="any" placeholder="0.00" required>
             </div>
+            <div class="form-group col">
+              <label for="loan-term">Loan Term (Months):</label>
+              <input type="number" id="loan-term" name="loan_term" min="1" placeholder="e.g., 12, 24, 36" required>
+            </div>
+          </div>
 
-            <div class="form-group">
-                <label for="loan-purpose">Purpose of Loan:</label>
-                <select id="loan-purpose" name="loan_purpose" required>
-                    <option value="" disabled selected>Select an option...</option>
-                    <option value="purchase">Property Purchase</option>
-                    <option value="construction">Ground-Up Construction</option>
-                    <option value="renovation">Renovation / Rehab</option>
-                    <option value="refinance">Refinance</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+          <div class="form-group">
+            <label for="loan-purpose">Purpose of Loan:</label>
+            <select id="loan-purpose" name="loan_purpose" required>
+              <option value="" disabled selected>Select an option...</option>
+              <option value="purchase">Property Purchase</option>
+              <option value="construction">Ground-Up Construction</option>
+              <option value="renovation">Renovation / Rehab</option>
+              <option value="refinance">Refinance</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
 
-            <div class="form-group attachment-group">
-                <label for="upload-executive-summary" class="file-label">
-                    <span>📄 Attach Executive Summary Document (Optional)</span>
-                    <input type="file" id="upload-executive-summary" name="upload_executive_summary" accept=".pdf,.doc,.docx">
-                </label>
-            </div>
+          <div class="form-group attachment-group">
+            <label for="upload-executive-summary" class="file-label">
+              <span>📄 Attach Executive Summary Document (Optional)</span>
+              <input type="file" id="upload-executive-summary" name="upload_executive_summary" accept=".pdf,.doc,.docx">
+            </label>
+          </div>
         </fieldset>
 
         <fieldset>
-            <legend>2. Financials & Background Documents</legend>
-            <p class="fieldset-note">Provide the following files if available to expedite underwriting.</p>
+          <legend>2. Financials & Background Documents</legend>
+          <p class="fieldset-note">Provide the following files if available to expedite underwriting.</p>
 
-            <div class="file-grid">
-                <div class="form-group">
-                    <label for="upload-financials">Financial Statements (Owner/Guarantor):</label>
-                    <input type="file" id="upload-financials" name="upload_financials" accept=".pdf,.xlsx,.csv" multiple>
-                    <span class="file-help">Accepts multiple files</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="upload-tax-returns">Tax Returns (Past 3 Years):</label>
-                    <input type="file" id="upload-tax-returns" name="upload_tax_returns" accept=".pdf" multiple>
-                    <span class="file-help">Accepts multiple files</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="upload-appraisal">Property Appraisal:</label>
-                    <input type="file" id="upload-appraisal" name="upload_appraisal" accept=".pdf">
-                </div>
-
-                <div class="form-group">
-                    <label for="upload-budget">Project/Building Budget Projections:</label>
-                    <input type="file" id="upload-budget" name="upload_budget" accept=".pdf,.xlsx">
-                </div>
-
-                <div class="form-group">
-                    <label for="upload-title">Title Report:</label>
-                    <input type="file" id="upload-title" name="upload_title" accept=".pdf">
-                </div>
-
-                <div class="form-group">
-                    <label for="upload-psa">Purchase & Sale Agreement (PSA):</label>
-                    <input type="file" id="upload-psa" name="upload_psa" accept=".pdf">
-                </div>
-
-                <div class="form-group">
-                    <label for="upload-leases">Prospective Tenant Leases:</label>
-                    <input type="file" id="upload-leases" name="upload_leases" accept=".pdf" multiple>
-                    <span class="file-help">Accepts multiple files</span>
-                </div>
+          <div class="file-grid">
+            <div class="form-group">
+              <label for="upload-financials">Financial Statements (Owner/Guarantor):</label>
+              <input type="file" id="upload-financials" name="upload_financials" accept=".pdf,.xlsx,.csv" multiple>
+              <span class="file-help">Accepts multiple files</span>
             </div>
+
+            <div class="form-group">
+              <label for="upload-tax-returns">Tax Returns (Past 3 Years):</label>
+              <input type="file" id="upload-tax-returns" name="upload_tax_returns" accept=".pdf" multiple>
+              <span class="file-help">Accepts multiple files</span>
+            </div>
+
+            <div class="form-group">
+              <label for="upload-appraisal">Property Appraisal:</label>
+              <input type="file" id="upload-appraisal" name="upload_appraisal" accept=".pdf">
+            </div>
+
+            <div class="form-group">
+              <label for="upload-budget">Project/Building Budget Projections:</label>
+              <input type="file" id="upload-budget" name="upload_budget" accept=".pdf,.xlsx">
+            </div>
+
+            <div class="form-group">
+              <label for="upload-title">Title Report:</label>
+              <input type="file" id="upload-title" name="upload_title" accept=".pdf">
+            </div>
+
+            <div class="form-group">
+              <label for="upload-psa">Purchase & Sale Agreement (PSA):</label>
+              <input type="file" id="upload-psa" name="upload_psa" accept=".pdf">
+            </div>
+
+            <div class="form-group">
+              <label for="upload-leases">Prospective Tenant Leases:</label>
+              <input type="file" id="upload-leases" name="upload_leases" accept=".pdf" multiple>
+              <span class="file-help">Accepts multiple files</span>
+            </div>
+          </div>
         </fieldset>
 
-        <!-- Dynamic Action Row containing Submit and Reset -->
+        <!-- Form Action Buttons Wrapper -->
         <div class="form-actions">
-            <button type="submit" class="submit-btn">Submit Application for Underwriting</button>
-            <button type="reset" class="reset-btn">Reset Form</button>
+          <button type="submit" class="submit-btn">Submit Application for Underwriting</button>
+          <button type="reset" class="reset-btn">Reset Form</button>
         </div>
-    </form>
-  </div>
+      </form>
+       
+    </div>
+  </section>
 </main>
 
 <footer class="footer-section">

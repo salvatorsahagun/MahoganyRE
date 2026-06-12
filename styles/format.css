@@ -1,197 +1,128 @@
+/* Institutional Brand Palette Definition */
 body {
   font-family: 'Georgia', serif;
   background-color: #FBF1F2; /* Pearl Pink Backdrop */
-  color: #2d3e2d;
+  color: #2D3E2D;            /* Charcoal Green Slate Text */
 }
 
-img {
-  border: 5px solid #000000;
-  outline: 3px solid #d4af37;
-  border-radius: 8px;
+h1, h2, h3 {
+  color: #013220;            /* Deep Forest Green */
 }
 
+/* Presentation Cage Isolations */
+.about-card, 
+.contact-card, 
+.faq-card, 
+.services-card {
+  background-color: #FFFFFF; /* Pristine Presentation Cage */
+}
+
+/* Header Brand Accents */
 header {
-  background: linear-gradient(135deg, #046307 0%, #013220 100%);
-  border-bottom: 3px solid #d4af37;
+  background: linear-gradient(135deg, #046307, #013220); /* Emerald to Forest */
+  border-bottom: 3px solid #D4AF37;                      /* Muted Gold Line */
 }
 
 header h1 {
-  color: #d4af37;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 1.8rem;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  text-transform: uppercase;
+header nav ul li a {
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
-nav ul li a::after {
-  background-color: #d4af37;
-}
-
-.about-card {
-  background: linear-gradient(145deg, #046307 0%, #013220 100%);
-  color: #ffffff;
-  border-radius: 15px;
-  border: 2px solid #d4af37;
-}
-
-.contact-card {
-  background: #ffffff;
-  border-radius: 15px;
-  border: 2px solid #000000;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
-.about-card h1 {
-  color: #d4af37;
-  text-transform: uppercase;
+/* Form Styling Rules */
+.input-group label {
+  font-weight: bold;
+  color: #2D3E2D;
 }
 
 .input-group input, 
 .input-group textarea {
-  border: 1px solid #000000;
-  border-radius: 4px;
-}
-
-.input-group input:focus {
-  border-color: #d4af37;
+  border: 1px solid #2D3E2D;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #046307 0%, #013220 100%);
-  color: #d4af37;
-  border: 2px solid #d4af37;
-  border-radius: 4px;
+  background-color: #013220;
+  color: #FFFFFF;
+  border: 1px solid #D4AF37;
+  font-size: 1rem;
   font-weight: bold;
+}
+
+/* Highlights & Specialized Text Rows */
+.highlight {
+  color: #046307;
+  font-weight: bold;
+}
+
+.faq-item, .service-item {
+  margin-bottom: 30px;
+}
+
+.faq-question, .service-item h2 {
+  color: #013220;
+  margin-bottom: 10px;
+}
+
+/* Footer Colors */
+.footer-section {
+  background-color: #FFFFFF;
+  border-top: 2px solid #D4AF37;
+}
+
+.footer-section p, 
+.footer-links a {
+  color: #2D3E2D;
+  font-size: 0.9rem;
+}
+
+
+/* Base Button Typography & Structure */
+.submit-btn, 
+.reset-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Primary Submit Button (Mahogany Accent) */
+.submit-btn {
+  background-color: #4A1515; /* Rich Mahogany Crimson */
+  color: #FFFFFF;
+  border: 1px solid #4A1515;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .submit-btn:hover {
-  background: #d4af37;
-  color: #013220;
-  letter-spacing: 1px;
+  background-color: #360F0F;
 }
 
-/* The Text Case Wrapper */
-.text-case {
-  background-color: rgba(255, 255, 255, 0.05); /* Slight tint to look like glass/casing */
-  border: 1px solid rgba(212, 175, 55, 0.3);    /* Subtle gold containment line */
-  border-radius: 8px;
-  
-  /* The Shadow: Creates a rich, layered drop shadow effect */
-  box-shadow: 
-    0 10px 20px rgba(0, 0, 0, 0.3), 
-    0 6px 6px rgba(0, 0, 0, 0.4),
-    inset 0 0 15px rgba(255, 255, 255, 0.05);
+.submit-btn:active {
+  transform: scale(0.98);
 }
 
 
-/* --- Footer --- */
-
-/* 1. The Wrapper: Spans the full width and centers the footer vertically/horizontally */
-.footer-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0; /* Ensures space above and below so borders are fully visible */
-  background: transparent; 
-}
-
-/* 2. The Floating Full-Width Capsule */
-.footer-section {
-  /* Spans the full width of its container, but leaves a small margin on the sides */
-  width: 95%; 
-  max-width: 1200px; /* Optional: keeps it from stretching too wide on massive screens */
-  
-  /* The Blend: Fully rounded capsule corners so both top and bottom are visible */
-  border-radius: 50px; 
-  
-  /* Silver Backdrop */
-  background: linear-gradient(135deg, #cfd1d3 0%, #e2e4e6 50%, #b8bac0 100%);
-  
-  /* Seperate Black & Gold Outline */
-  border: 3px solid #d4af37; /* Clean gold border all the way around */
-  box-shadow: 0 0 0 3px #000000, 0 10px 25px rgba(0, 0, 0, 0.25); /* Sharp black outline + drop shadow */
-  
-  /* Internal Centered Layout */
-  padding: 25px 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-/* Text Styling */
-.footer-section p {
-  margin: 0;
-  color: #1a1a1a;
-  font-weight: bold;
-  font-size: 13px;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-/* Horizontal Links */
-.footer-links {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-links a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: color 0.3s ease;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-.footer-links a:hover {
-  color: #aa840a;
-}
-
-/* Responsive adjustment for mobile */
-@media (max-width: 650px) {
-  .footer-section {
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 30px; /* Slightly tighter radius for smaller screens */
-  }
-}
-
-/* ==========================================================================
-   Case Presentation & Button Theming Additions
-   ========================================================================== */
-
-/* Turns the form container into a distinct, high-end "case" panel */
-.form-container {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eef2f5;
-}
-
-/* Theming defaults for the new corporate Reset action */
 .reset-btn {
-  background-color: #f4f6f8;
-  color: #4a5568;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
+  color: #4A1515; /* Matches theme text */
+  border: 1px solid #CCCCCC;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
 }
 
 .reset-btn:hover {
-  background-color: #e2e8f0;
-  color: #1a202c;
+  background-color: #F9F5F5; /* Soft background tint on hover */
+  border-color: #4A1515; /* Visual confirmation updates border color */
+}
+
+.reset-btn:active {
+  transform: scale(0.98);
 }

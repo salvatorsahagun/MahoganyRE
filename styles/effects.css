@@ -1,103 +1,45 @@
-/* --- KEYFRAME ANIMATIONS --- */
-
-/* Fade in up animation for the main cards */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Card Elevation Boundaries */
+.about-card, 
+.contact-card, 
+.faq-card, 
+.services-card {
+  box-shadow: 0 4px 15px rgba(1, 50, 32, 0.08);
 }
 
-/* Subtle floating effect */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* Navigation Interactive Changes */
+header nav ul li a {
+  transition: color 0.2s ease;
 }
 
-/* Gold border pulse */
-@keyframes goldGlow {
-  0% { border-color: #d4af37; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-  50% { border-color: #f7e08a; box-shadow: 0 15px 45px rgba(212, 175, 55, 0.3); }
-  100% { border-color: #d4af37; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+header nav ul li a:hover {
+  color: #D4AF37; /* Shifts cleanly to gold on hover */
 }
 
-/* --- HOVERS & TRANSITIONS --- */
-
-img {
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/* Asset Borders & Transformations */
+.about-content img {
+  border: 5px solid #2D3E2D;
+  outline: 3px solid #D4AF37;
 }
 
-img:hover {
-  transform: scale(1.05) rotate(1deg);
-}
-
-header {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-nav ul li a {
-  transition: all 0.3s ease;
-}
-
-nav ul li a::after {
-  transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-.about-card {
-  animation: fadeInUp 1s ease-out, goldGlow 4s infinite ease-in-out;
-}
-
-.contact-card {
-  animation: fadeInUp 1.2s ease-out;
-}
-
-/* Hovering the cards makes them "lift" */
-.about-card:hover, .contact-card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-}
-
-.input-group input, 
-.input-group textarea {
-  transition: all 0.3s ease;
-}
-
-.input-group input:focus {
-  transform: translateX(5px);
+/* Form Interactive Enhancements */
+.input-group input:focus, 
+.input-group textarea:focus {
+  outline: 2px solid #D4AF37;
 }
 
 .submit-btn {
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .submit-btn:hover {
-  transform: scale(1.02);
+  background-color: #046307;
 }
 
-/* Footer Section */
-.footer-section {
-  animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 1.5s;
+.submit-btn:active {
+  transform: scale(0.98);
 }
 
-/* Text Case Transitions */
-.text-case {
-  transition: all 0.3s ease;
-}
-
-.text-case:hover {
-  transform: translateY(-2px);
-  box-shadow: 
-    0 14px 28px rgba(0, 0, 0, 0.4), 
-    0 10px 10px rgba(0, 0, 0, 0.4);
+.footer-links a:hover {
+  color: #046307;
+  text-decoration: underline;
 }
